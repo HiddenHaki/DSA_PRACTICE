@@ -14,7 +14,6 @@ public class PartitionArrayPivot {
     }
 
     public int[] pivotArray(int[] nums, int pivot) {
-        int n = nums.length;
         List<Integer> less = new ArrayList<>();
         List<Integer> equal = new ArrayList<>();
         List<Integer> greater = new ArrayList<>();
