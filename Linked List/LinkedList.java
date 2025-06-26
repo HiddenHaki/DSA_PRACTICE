@@ -14,7 +14,7 @@ class Node{
 
 public class LinkedList {
 
-    public static void addAtMid(Node head, int data,int pos) {
+    public static void addAtPos(Node head, int data,int pos) {
         Node newNode = new Node(data);
 
         Node temp = head;
@@ -70,7 +70,7 @@ public class LinkedList {
         int pos = sc.nextInt();
         System.out.println("Enter the data for position "+pos);
         val = sc.nextInt();
-        addAtMid(head, val, pos);        
+        addAtPos(head, val, pos);        
         
         print(head);
         
