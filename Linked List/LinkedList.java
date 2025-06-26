@@ -14,6 +14,17 @@ class Node{
 
 public class LinkedList {
 
+    public static void addAtMid(Node head, int data,int pos) {
+        Node newNode = new Node(data);
+
+        Node temp = head;
+        for (int i = 1; i < pos - 1; i++) {
+            temp = temp.next;
+        }
+        newNode.next = temp.next;
+        temp.next = newNode;
+    }
+
     public static void addLast(Node head, int data) {
         Node newNode = new Node(data);
 
@@ -48,12 +59,18 @@ public class LinkedList {
         int val = sc.nextInt();
         Node head = new Node(val);
 
-        for (int i = 2; i <=n; i++) {
+        for (int i = 2; i <= n; i++) {
             System.out.println("Enter the data for node " + i);
             val = sc.nextInt();
             addLast(head, val);
         }
+        print(head);
 
+        System.out.println("Want to add at any specific position? Give Position");
+        int pos = sc.nextInt();
+        System.out.println("Enter the data for position "+pos);
+        val = sc.nextInt();
+        addAtMid(head, val, pos);        
         
         print(head);
         
